@@ -9,19 +9,12 @@ ScavTrap::ScavTrap(const std::string& name)
 }
 
 ScavTrap::ScavTrap(const ScavTrap& other)
-{
-    this->name = other.name;
-    this->hitPoints = other.hitPoints;
-    this->energyPoints = other.energyPoints;
-    this->attackDamage = other.attackDamage;
+    : ClapTrap(other) {
     std::cout << "ScavTrap " << this->name << " copy constructed." << std::endl;
 }
 ScavTrap& ScavTrap::operator=(const ScavTrap& other) {
     if (this != &other) {
-        this->name = other.name;
-        this->hitPoints = other.hitPoints;
-        this->energyPoints = other.energyPoints;
-        this->attackDamage = other.attackDamage;
+        ClapTrap::operator=(other);
     }
     std::cout << "ScavTrap " << this->name << " assigned." << std::endl;
     return *this;
