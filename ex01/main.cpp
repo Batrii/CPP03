@@ -3,7 +3,7 @@
 
 int main()
 {
-    ScavTrap scav("badr");
+    ScavTrap scav;
     scav.attack("enemy");
     scav.takeDamage(5);
     scav.beRepaired(3);
